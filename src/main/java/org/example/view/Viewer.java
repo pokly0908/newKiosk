@@ -5,6 +5,7 @@ import org.example.model.Product;
 import org.example.vo.PProduct;
 
 import java.util.Scanner;
+import java.lang.Integer;
 
 import static org.example.controller.paySystem.comPay;
 
@@ -242,13 +243,22 @@ public class Viewer {
     //----------------------5단계---------------------------
     //---------------------결제완료--------------------------
     public void comMenu(){
+        Integer totalprice = 0;
         comPay();
         System.out.println("주문번호 : " + Cart.history.size()+ "입니다");
         System.out.println("----------주문 내역.----------");
         for(int i = 0; i < Cart.cart.size(); i++){
             System.out.println(Cart.cart.get(i));
+            totalprice += Integer.valueOf(Cart.cart.get(i).get(1));
         }
+        System.out.println("총 금액은 " + totalprice + "원 입니다.");
         Cart.cart.clear(); // 주문 내역(최종 장바구니)출력 후 초기화
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            // InterruptedException 처리
+            e.printStackTrace();
+        }
         mainMenu();
     }
     //----------------------그외(총합, 결제기록)-------------------
