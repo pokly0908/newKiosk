@@ -7,8 +7,4 @@ public class Main {
         Viewer view = new Viewer();
         view.mainMenu();
     }
-
-
-    //장바구니 비우기 X
-    //
 }
