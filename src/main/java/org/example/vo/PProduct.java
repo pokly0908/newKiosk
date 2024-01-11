@@ -1,7 +1,9 @@
 package org.example.vo;
+
 import org.example.model.*;
 
 public class PProduct extends org.example.model.Product {
+
     //------PRODUCT------
     public Product cheese = new Product();
     public Product bulgogi = new Product();
@@ -19,13 +21,15 @@ public class PProduct extends org.example.model.Product {
     public Menu beers = new Menu();
     public Menu frozenCustards = new Menu();
     public Menu drinks = new Menu();
-    public void setMenu(){
+
+    public void setMenu() {
         burgers.setInfo("Burgers", "앵거스 비프 통살을 다져 만든 버거");
         beers.setInfo("Beer", "뉴욕 브루클린 브루어리에서 양조한 맥주");
         frozenCustards.setInfo("Frozen Custard", "매장에서 신선하게 만드는 아이스크림");
         drinks.setInfo("Drinks", "매장에서 직접 만드는 음료");
     }
-    public void setProd(){
+
+    public void setProd() {
         cheese.setInfo("치즈버거", 3500, "치즈버거", false);
         bulgogi.setInfo("불고기버거", 4000, "불고기버거", false);
         shrimp.setInfo("새우버거", 4200, "새우버거", false);
